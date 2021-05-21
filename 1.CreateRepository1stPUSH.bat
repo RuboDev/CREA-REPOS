@@ -2,15 +2,15 @@
 
 :: Pedimos usuario para ruta de add origin
 set /p user= "Introduzca usuario de GitHub:"
-:: Pedimos token ssh para autenticar en gitHub
-set /p token= "Introduzca token ssh:"
+:: Pedimos token PAT para autenticar en gitHub
+set /p token= "Introduzca token de acceso personal(PAT):"
 
 :: Pedimos y guardamos en la variable nomRepo el nombre del repositorio, y en la variable descripcion la descripcion del repositorio.
 echo *** Creando Nuevo repositorio ***
 set /p nomRepo= "Introduzca nombre para su repositorio:"
 set /p descripcion= "Introduzca descripcion de su repositorio:"
 :: Pedimos nombre de la rama para el primer commit, usualmente master, o main
-set /p rama= "Introduzca rama en la que comenzar el flujo de trabajo ej: master:"
+set /p rama= "Introduzca rama inicial del flujo de trabajo(ej.: master):"
 
 cd ..
 
