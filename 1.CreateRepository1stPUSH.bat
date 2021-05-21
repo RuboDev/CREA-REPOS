@@ -21,7 +21,10 @@ gh repo create %nomRepo% --public --confirm -d "%descripcion%"
 cd %nomRepo%
 
 ::Creamos .gitignore
-type ..\CREA-REPOS-%rama%\.gitignoresource.txt >> .gitignore
+type ..\CREA-REPOS-master\.gitignoresource.txt >> .gitignore 
+::Comprobamos si el archivo .gitignore esta vacio, si es asi utilizamos otra ruta
+For %%f In (.gitignore) Do If %%~zf==0 (type ..\CREA-REPOS\.gitignoresource.txt >> .gitignore)
+
 
 
 :: Creamos README.md con el nombre pasado por consola como cabecera y el texto abajo escrito
